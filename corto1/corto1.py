@@ -1,4 +1,4 @@
-import time #Para generar pausa
+#import time #Para generar pausa
 # Definiciones utilizadas
 def collatz(num):
     secuencia=[num]
@@ -16,7 +16,7 @@ def collatz(num):
 print("Generando archivo")
 archivo =open('collatz.txt','w')   #Abre el archivo para sobreescribir, en caso de no existir lo crea
 for i in range(2,581,1):    #Genera la lista desde 2 hasta 580
-    archivo.write((str(collatz(i))+str('\n')))
-    time.sleep(1)
+    archivo.write((str(collatz(i))+str('\n')))  # Agrega una linea al archivo
+    #time.sleep(1)   #Genera una pausa al agregar una linea 
 archivo.close() #Cierra el archivo generado
 print("Secuencia de Collatz terminada.")
